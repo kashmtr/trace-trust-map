@@ -1,13 +1,8 @@
 // src/types/traceEngine.ts
 
-export type TransactionStatus = "complete" | "in-progress" | "pending" | "delayed";
+export type TransactionStatus = "complete" | "in-progress" | "pending" | "delayed" | "in_transit";
 
-export type ComponentLayer = 
-  | "SourceAccount" 
-  | "PaymentRail" 
-  | "FXEngine" 
-  | "SettlementQueue" 
-  | "ReceivingBank";
+export type ComponentLayer = string;
 
 export interface JourneyStep {
   id: string;
